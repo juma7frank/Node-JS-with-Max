@@ -1,0 +1,5 @@
+Assignment
+1. Spin up a Node.js-driven Sever(on port 3000 or any other port)
+2. Handle two routes: "/" and "/users": On '/' return some dummy greeting text, like "Hello there 👋🏾" or any other text of your own, then on "/users" return some dummy html list for instance something like "<ul><li>User1<li><ul>..."
+3. Add a form with a "username" <input> to the "/" page and submit a POST request to "/create-user" upon a button click
+4. Add the "/create-user" route and parse the incoming data (i.e the username) and simply log it to the console
