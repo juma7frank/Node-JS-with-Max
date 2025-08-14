@@ -71,6 +71,11 @@ const requestHandler = (req, res) => {
         res.statusCode = 302;
         //
         // Set the headers for the response
+        // In Node.js, res.setHeader(name, value) sets an HTTP response header that’s sent to the browser before the body of the response.
+        // Headers are like “metadata” about the response — they tell the browser how to interpret the data you’re sending.
+        // Typically, make it a habit of setting headers at the beginning of your if-block, since the setHeaders are route specific
+        // What happens is that when you setHeaders, it's stored in the object, and Node sends it right before starting to send the chunks
+        // If you try to set them after writing body content, Node will throw an error saying headers have already been sent.
         res.setHeader('Location', '/');
         //
         // End the response, and don't forget to return so that to avoid, if the condition is satisfied, to run the rest of the code in this anonymous code
