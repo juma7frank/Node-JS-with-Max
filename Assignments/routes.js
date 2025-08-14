@@ -9,7 +9,7 @@ const requestHandler = (req, res) => {
   if (url === '/') {
     //
     // Set a header to tell the browser that I'll send a html code
-    res.setHeader('context-type', 'text/html');
+    res.setHeader('content-type', 'text/html');
 
     //
     // Display the dummy greet on the screen
